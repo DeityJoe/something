@@ -11,6 +11,6 @@ do
   images=$(ls *.{png,jpg})
   for image in $images
   do
-    cwebp $image -q 90 -o $rootdir/webp/${image%.*}.webp
+    cwebp $image -q 90 -o $rootdir/webp/$dir-${image%.*}.webp
   done
 done
