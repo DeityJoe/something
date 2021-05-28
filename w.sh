@@ -2,15 +2,15 @@
 #!/usr/bin/env bash
 
 mkdir "webp"
-root=$(pwd)
+rootdir=$(pwd)
 dirs=$(ls)
 for dir in $dirs
 do
-  cd $dir
+  cd $rootdir/$dir
+  rm *大门.jpg
   images=$(ls *.{png,jpg})
   for image in $images
   do
-    cwebp $image -q 90 -o $root/webp/${image%.*}.webp
+    cwebp $image -q 90 -o $rootdir/webp/${image%.*}.webp
   done
-  cd ..
 done
