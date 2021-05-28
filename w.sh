@@ -1,7 +1,6 @@
 
 #!/usr/bin/env bash
 
-mkdir "webp"
 rootdir=$(pwd)
 dirs=$(ls)
 for dir in $dirs
@@ -11,6 +10,6 @@ do
   images=$(ls *.{png,jpg})
   for image in $images
   do
-    cwebp $image -q 90 -o $rootdir/webp/$dir-${image%.*}.webp
+    cwebp $image -q 90 -o /root/webp/$dir-${image%.*}.webp
   done
 done
