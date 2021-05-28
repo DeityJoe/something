@@ -12,4 +12,5 @@ do
   do
     cwebp $image -q 90 -o $root/webp/${image%.*}.webp
   done
+  cd ..
 done
